@@ -6,15 +6,11 @@
       <v-spacer></v-spacer>
       <v-btn to="/">Liste des Articles</v-btn>
       <v-btn to="/create">Créer un Article</v-btn>
+      <v-btn to="/contact">Nous contacter</v-btn>
     </v-app-bar>
 
     <v-container>
-      <v-progress-circular
-        v-if="loading"
-        indeterminate
-        size="64"
-        class="mx-auto mt-12"
-      ></v-progress-circular>
+      <v-progress-circular v-if="loading" indeterminate size="64" class="mx-auto mt-12"></v-progress-circular>
 
       <v-alert v-if="error" type="error">{{ error }}</v-alert>
 
@@ -24,7 +20,6 @@
 </template>
 
 <script>
-import router from './router';
 
 export default {
   data() {
